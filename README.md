@@ -15,3 +15,5 @@ Referred to 2023 Fall Semester Advanced-OOP Lecture
 ✔️ [Adapter Pattern](https://jaeyoungstudio.notion.site/Adapter-Pattern-449664cb3a6a47c787fe44fd7c324d2c?pvs=4)
 
 ✔️ [Facade Pattern](https://jaeyoungstudio.notion.site/Facade-Pattern-61e267f9fd914616ab4b4c0ea3d905b7?pvs=4)
+
+✔️ [State Pattern](https://jaeyoungstudio.notion.site/State-Pattern-bdcd87112af84837b0e3338d0109bb8f?pvs=4)
