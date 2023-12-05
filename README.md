@@ -39,3 +39,5 @@ Referred to 2023 Fall Semester Advanced-OOP Lecture
 ✔️ [State Pattern](https://jaeyoungstudio.notion.site/State-Pattern-bdcd87112af84837b0e3338d0109bb8f?pvs=4)
 
 ✔️ [Command Pattern](https://jaeyoungstudio.notion.site/Command-Pattern-88930a058484431a8b5d0ef228e205c6?pvs=4)
+
+✔️ [Template Method Pattern](https://jaeyoungstudio.notion.site/Template-Method-Pattern-5608c2738c40481e9f2fa93d552a0f64?pvs=4)
