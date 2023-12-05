@@ -1,8 +1,28 @@
 # GoF-Design-Patterns
 
+### Introduction
+
 Source code repository for Gangs of Four Design Patterns
 
 Referred to 2023 Fall Semester Advanced-OOP Lecture
+
+<br>
+
+### Types of Design Patterns
+
+|Creational Patterns|Structural Patterns|Behavioral Patterns|
+|:---:|:---:|:---:|
+|Abstract Factory|Adapter|Change of Responsibility|
+|Builder|Bridge|Command|
+|Factory Method|Composite|Interpreter|
+|Prototype|Decorator|Iterator|
+|Singleton|Facade|Mediator|
+||Flyweight|Memento|
+||Proxy|Observer|
+|||State|
+|||Strategy|
+|||Template Method|
+|||Visitor|
 
 <br>
 
