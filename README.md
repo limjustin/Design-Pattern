@@ -34,6 +34,8 @@ Referred to 2023 Fall Semester Advanced-OOP Lecture
 
 ✔️ [Singleton Pattern](https://jaeyoungstudio.notion.site/Singleton-Pattern-bda3f65a458e4b198c49694f0309555a?pvs=4)
 
+✔️ [Iterator Pattern](https://jaeyoungstudio.notion.site/Iterator-Pattern-630942fb9888422480d13dc241085693?pvs=4)
+
 ✔️ [DAO Pattern](https://jaeyoungstudio.notion.site/DAO-Pattern-9f36c7dad2b74aa398348e79a770f2f2?pvs=4)
 
 ✔️ [Adapter Pattern](https://jaeyoungstudio.notion.site/Adapter-Pattern-449664cb3a6a47c787fe44fd7c324d2c?pvs=4)
