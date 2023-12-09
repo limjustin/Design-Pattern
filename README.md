@@ -36,6 +36,8 @@ Referred to 2023 Fall Semester Advanced-OOP Lecture
 
 ✔️ [Iterator Pattern](https://jaeyoungstudio.notion.site/Iterator-Pattern-630942fb9888422480d13dc241085693?pvs=4)
 
+✔️ [Decorator Pattern](https://jaeyoungstudio.notion.site/Decorator-Pattern-c9c080985f4b4dcaa43036a4af7aaa1c?pvs=4)
+
 ✔️ [DAO Pattern](https://jaeyoungstudio.notion.site/DAO-Pattern-9f36c7dad2b74aa398348e79a770f2f2?pvs=4)
 
 ✔️ [Adapter Pattern](https://jaeyoungstudio.notion.site/Adapter-Pattern-449664cb3a6a47c787fe44fd7c324d2c?pvs=4)
