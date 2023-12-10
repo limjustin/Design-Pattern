@@ -40,6 +40,8 @@ Referred to 2023 Fall Semester Advanced-OOP Lecture
 
 ✔️ [Factory Method Pattern](https://jaeyoungstudio.notion.site/Factory-Method-Pattern-bad1c1c3996d497199b765584600bc5e?pvs=4)
 
+✔️ [Abstract Factory Pattern](https://jaeyoungstudio.notion.site/Abstract-Factory-Pattern-b3565e3ce5e94f7c9419f2649c92923a?pvs=4)
+
 ✔️ [DAO Pattern](https://jaeyoungstudio.notion.site/DAO-Pattern-9f36c7dad2b74aa398348e79a770f2f2?pvs=4)
 
 ✔️ [Adapter Pattern](https://jaeyoungstudio.notion.site/Adapter-Pattern-449664cb3a6a47c787fe44fd7c324d2c?pvs=4)
