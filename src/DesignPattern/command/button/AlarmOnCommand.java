@@ -1,4 +1,4 @@
-package DesignPattern.command;
+package DesignPattern.command.button;
 
 public class AlarmOnCommand implements Command {
     private final Alarm alarm;

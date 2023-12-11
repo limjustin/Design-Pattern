@@ -1,4 +1,4 @@
-package DesignPattern.command;
+package DesignPattern.command.button;
 
 public class Lamp {
     public void turnOn() {

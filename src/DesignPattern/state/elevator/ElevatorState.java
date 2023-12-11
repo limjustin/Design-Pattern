@@ -1,4 +1,4 @@
-package DesignPattern.state;
+package DesignPattern.state.elevator;
 
 public interface ElevatorState {
     public void pushUpButton();

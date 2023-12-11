@@ -1,4 +1,4 @@
-package DesignPattern.command;
+package DesignPattern.command.button;
 
 public class LampOnCommand implements Command {
     private final Lamp lamp;
