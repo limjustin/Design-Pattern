@@ -1,4 +1,4 @@
-package DesignPattern.facade;
+package DesignPattern.facade.washingmachine;
 
 public class WashingMachine {
 

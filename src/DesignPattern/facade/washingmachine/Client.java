@@ -1,4 +1,4 @@
-package DesignPattern.facade;
+package DesignPattern.facade.washingmachine;
 
 public class Client {
     public static void main(String[] args) {
