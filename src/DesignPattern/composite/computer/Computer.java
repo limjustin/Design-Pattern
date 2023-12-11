@@ -1,4 +1,4 @@
-package DesignPattern.composite;
+package DesignPattern.composite.computer;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package DesignPattern.composite;
+package DesignPattern.composite.computer;
 
 public class Monitor implements ComputerDevice {
     private final int price;

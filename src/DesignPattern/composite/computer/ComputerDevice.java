@@ -1,4 +1,4 @@
-package DesignPattern.composite;
+package DesignPattern.composite.computer;
 
 public interface ComputerDevice {
     public int getPrice();

@@ -1,10 +1,10 @@
-package DesignPattern.composite;
+package DesignPattern.composite.computer;
 
-public class Keyboard implements ComputerDevice {
+public class Body implements ComputerDevice {
     private final int price;
     private final int power;
 
-    public Keyboard(int price, int power) {
+    public Body(int price, int power) {
         this.price = price;
         this.power = power;
     }
