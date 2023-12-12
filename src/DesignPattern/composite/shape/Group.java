@@ -1,73 +1,86 @@
 package DesignPattern.composite.shape;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Group implements Selectable {
-    private String name;
+    private List<Selectable> components;
+    private int num;
+    private int minBoundsX;
+    private int minBoundsY;
+    private int maxBoundsX;
+    private int maxBoundsY;
 
-    private List<Shape> shapes = new ArrayList<>();
-
-    public Group(String name) {
-        this.name = name;
+    public Group(int num) {
+        this.num = num;
+        components = new ArrayList<>();
+        minBoundsX = Integer.MAX_VALUE;  // 신기한 방법일세
+        minBoundsY = Integer.MAX_VALUE;  // 주의! 거꾸로 넣으면 안 된다!
+        maxBoundsX = Integer.MIN_VALUE;
+        maxBoundsY = Integer.MIN_VALUE;
     }
 
-    public void addShape(Shape shape) {
-        shapes.add(shape);
+    public void add(Selectable component) {
+        components.add(component);
+        updateValue(component);
     }
 
-    public void removeShape(Shape shape) {
-        shapes.remove(shape);
+    private void updateValue(Selectable component) {
+        if (minBoundsX > component.getMinBoundsX())
+            minBoundsX = component.getMinBoundsX();
+
+        if (minBoundsY > component.getMinBoundsY())
+            minBoundsY = component.getMinBoundsY();
+
+        if (maxBoundsX < component.getMaxBoundsX())
+            maxBoundsX = component.getMaxBoundsX();
+
+        if (maxBoundsY < component.getMaxBoundsY())
+            maxBoundsY = component.getMaxBoundsY();
     }
 
     @Override
     public int getMinBoundsX() {
-        List<Integer> list = new ArrayList<>();
-        for (Shape shape : shapes)
-            list.add(shape.getMinBoundsX());
-        return Collections.min(list);
+        return minBoundsX;
     }
 
     @Override
     public int getMinBoundsY() {
-        List<Integer> list = new ArrayList<>();
-        for (Shape shape : shapes)
-            list.add(shape.getMinBoundsY());
-        return Collections.min(list);
+        return minBoundsY;
     }
 
     @Override
     public int getMaxBoundsX() {
-        List<Integer> list = new ArrayList<>();
-        for (Shape shape : shapes)
-            list.add(shape.getMaxBoundsX());
-        return Collections.max(list);
+        return maxBoundsX;
     }
 
     @Override
     public int getMaxBoundsY() {
-        List<Integer> list = new ArrayList<>();
-        for (Shape shape : shapes)
-            list.add(shape.getMaxBoundsY());
-        return Collections.max(list);
+        return maxBoundsY;
     }
 
     @Override
     public String getName() {
-        return name;
+        return "Group: " + num;
     }
 
     @Override
     public boolean isSelected(int x, int y) {
-        boolean result = x >= getMinBoundsX() && x <= getMaxBoundsX() && y >= getMinBoundsY() && y <= getMaxBoundsY();
-        System.out.println(getName() + " is selected at (" + x + ", " + y + "): " + result);
-        return result;
+        boolean isSelected = (x >= getMinBoundsX() && x <= getMaxBoundsX() && y >= getMinBoundsY() && y <= getMaxBoundsY());
+        System.out.println(getName() + " is selected at (" + x + ", " + y + "):");
+        System.out.println(isSelected);
+        return isSelected;
     }
 
     @Override
     public void print() {
-        for (Shape shape : shapes)
-            shape.print();
+        System.out.println(getName());
+        System.out.println("NumOfSelectables: " + components.size());
+        System.out.println("minBoundsX: " + getMinBoundsX() + ", minBoundsY: " + getMinBoundsY());
+        System.out.println("maxBoundsX: " + getMaxBoundsX() + ", maxBoundsY: " + getMaxBoundsY());
+
+        for (Selectable selectable : components) {
+            selectable.print();
+        }
     }
 }

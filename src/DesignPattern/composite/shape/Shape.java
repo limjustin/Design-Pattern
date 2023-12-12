@@ -1,50 +1,50 @@
 package DesignPattern.composite.shape;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 public class Shape implements Selectable {
-
+    private int minBoundsX;
+    private int minBoundsY;
+    private int maxBoundsX;
+    private int maxBoundsY;
     private String name;
-    private int[] coords;
-    private int idx;
-    private List<Integer> xCoords = new ArrayList<>();
-    private List<Integer> yCoords = new ArrayList<>();
 
-    public Shape(String name, int[] coords, int idx) {
-        this.name = name;
-        this.coords = coords;
-        this.idx = idx;
-        separate();
+    public void setMinBoundsX(int minBoundsX) {
+        this.minBoundsX = minBoundsX;
     }
 
-    public void separate() {
-        for (int i = 0; i < coords.length; i++)
-            if (i % 2 == 0)
-                xCoords.add(coords[i]);
-            else
-                yCoords.add(coords[i]);
+    public void setMinBoundsY(int minBoundsY) {
+        this.minBoundsY = minBoundsY;
+    }
+
+    public void setMaxBoundsX(int maxBoundsX) {
+        this.maxBoundsX = maxBoundsX;
+    }
+
+    public void setMaxBoundsY(int maxBoundsY) {
+        this.maxBoundsY = maxBoundsY;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
     public int getMinBoundsX() {
-        return Collections.min(xCoords);
+        return minBoundsX;
     }
 
     @Override
     public int getMinBoundsY() {
-        return Collections.min(yCoords);
+        return minBoundsY;
     }
 
     @Override
     public int getMaxBoundsX() {
-        return Collections.max(xCoords);
+        return maxBoundsX;
     }
 
     @Override
     public int getMaxBoundsY() {
-        return Collections.max(yCoords);
+        return maxBoundsY;
     }
 
     @Override
@@ -54,14 +54,15 @@ public class Shape implements Selectable {
 
     @Override
     public boolean isSelected(int x, int y) {
-        boolean result = x >= getMinBoundsX() && x <= getMaxBoundsX() && y >= getMinBoundsY() && y <= getMaxBoundsY();
-        System.out.println(getName() + " is selected at (" + x + ", " + y + "): " + result);
-        return result;
+        boolean isSelected = (x >= getMinBoundsX() && x <= getMaxBoundsX() && y >= getMinBoundsY() && y <= getMaxBoundsY());
+        System.out.println(getName() + " is selected at (" + x + ", " + y + "):");
+        System.out.println(isSelected);
+        return isSelected;
     }
 
     @Override
     public void print() {
-        System.out.println(getName());
+        System.out.println(getName() + ":");
         System.out.println("minBoundsX: " + getMinBoundsX() + ", minBoundsY: " + getMinBoundsY());
         System.out.println("maxBoundsX: " + getMaxBoundsX() + ", maxBoundsY: " + getMaxBoundsY());
     }
