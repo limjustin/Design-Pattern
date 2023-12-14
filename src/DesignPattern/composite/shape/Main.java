@@ -15,17 +15,13 @@ public class Main {
                 31, 39, 31, 48, 45, 11 };  // g1_T2
 
         // Selectable을 저장할 수 있는 ArrayList를 생성하고, Rectangle R1, Triangle T1을 추가
-        // Group을 생성하고 Rectangle g1_R1, g1_R2을 그룹에 추가
-        // 그룹에 Triangle g1_T1, g1_T2를 추가,
-        // 생성된 그룹을 ArrayList에 추가
-
-        // ArrayList에 있는 각 Selectable의 정보를 화면에 출력하고,
-        // 좌표 (20, 20), (30, 30), (40, 40)이 BoundingBox애 포함되는지 출력
-
         ArrayList<Selectable> selectables = new ArrayList<>();
         selectables.add(new Rectangle("R1", coords, 0));
         selectables.add(new Triangle("T1", coords, 4));
 
+        // Group을 생성하고 Rectangle g1_R1, g1_R2을 그룹에 추가
+        // 그룹에 Triangle g1_T1, g1_T2를 추가,
+        // 생성된 그룹을 ArrayList에 추가
         Group g1 = new Group(1);
         g1.add(new Rectangle("g1_R1", coords, 10));
         g1.add(new Rectangle("g1_R2", coords, 14));
@@ -33,23 +29,13 @@ public class Main {
         g1.add(new Triangle("g1_T2", coords, 24));
         selectables.add(g1);
 
+        // ArrayList에 있는 각 Selectable의 정보를 화면에 출력하고,
+        // 좌표 (20, 20), (30, 30), (40, 40)이 BoundingBox애 포함되는지 출력
         for (Selectable s : selectables) {
             s.print();
             s.isSelected(20, 20);
             s.isSelected(30, 30);
             s.isSelected(40, 40);
         }
-
-//        for (Selectable s : selectables) {
-//            System.out.println();
-//            s.print();
-//            System.out.printf("%s is selected at (%d, %d): %s \n",
-//                    s.getName(), 20, 20, s.isSelected(20, 20));
-//            System.out.printf("%s is selected at (%d, %d): %s \n",
-//                    s.getName(), 30, 30, s.isSelected(30, 30));
-//            System.out.printf("%s is selected at (%d, %d): %s \n",
-//                    s.getName(), 40, 40, s.isSelected(40, 40));
-//        }
-
     }
 }

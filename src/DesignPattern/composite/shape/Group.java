@@ -66,7 +66,7 @@ public class Group implements Selectable {
 
     @Override
     public boolean isSelected(int x, int y) {
-        boolean isSelected = (x >= getMinBoundsX() && x <= getMaxBoundsX() && y >= getMinBoundsY() && y <= getMaxBoundsY());
+        boolean isSelected = (x >= this.minBoundsX && x <= this.maxBoundsX && y >= this.minBoundsY && y <= this.maxBoundsY);
         System.out.println(getName() + " is selected at (" + x + ", " + y + "):");
         System.out.println(isSelected);
         return isSelected;
@@ -76,8 +76,8 @@ public class Group implements Selectable {
     public void print() {
         System.out.println(getName());
         System.out.println("NumOfSelectables: " + components.size());
-        System.out.println("minBoundsX: " + getMinBoundsX() + ", minBoundsY: " + getMinBoundsY());
-        System.out.println("maxBoundsX: " + getMaxBoundsX() + ", maxBoundsY: " + getMaxBoundsY());
+        System.out.println("minBoundsX: " + this.minBoundsX + ", minBoundsY: " + this.minBoundsY);
+        System.out.println("maxBoundsX: " + this.maxBoundsX + ", maxBoundsY: " + this.maxBoundsY);
 
         for (Selectable selectable : components) {
             selectable.print();
