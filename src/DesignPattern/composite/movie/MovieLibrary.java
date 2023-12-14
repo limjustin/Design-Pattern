@@ -7,28 +7,21 @@ public class MovieLibrary {
 
     List<Component> components;
     private String name;
+    private int removeIdx;
 
     public MovieLibrary(String name) {
         this.components = new ArrayList<>();
         this.name = name;
+        removeIdx = -1;
     }
 
     public void insert(Component component) {
         Boolean replace = checkDuplicate(component);
-        if(!replace) {
-            components.add(component);  // movie, movieseries 나눠서 구현했는데 그냥 이렇게 구현하면 되네!
-            System.out.println("MovieLibrary: " + component.getYear() + " 년도에 제작된(구성된) 영화(시리즈) " + component.getTitle() + " 가(이) 추가되었습니다.");
-        }
-    }
+        if (replace)  // replace 값이 true 값일 경우 기존 영화(시리즈) 삭제
+            delete(components.get(removeIdx));
 
-    private Boolean checkDuplicate(Component component) {
-        for (Component c : components) {
-            if (c.equals(component.getTitle(), component.getYear())) {
-                delete(c);
-                return true;
-            }
-        }
-        return false;
+        components.add(component);
+        System.out.println("MovieLibrary: " + component.getYear() + " 년도에 제작된(구성된) 영화(시리즈) " + component.getTitle() + " 가(이) 추가되었습니다.");
     }
 
     public void delete(Component component) {
@@ -39,6 +32,17 @@ public class MovieLibrary {
         else {
             System.out.println("MovieLibrary: " + component.getYear() + "년에 제작된 영화(시리즈) "  + component.getTitle() + " 가(이) 없습니다.");
         }
+    }
+
+    private Boolean checkDuplicate(Component component) {
+        for (Component c : components) {
+            if (c.equals(component.getTitle(), component.getYear())) {
+                // delete(c);  // replace 값이 true 이면 기존 영화(시리즈) 삭제
+                removeIdx = components.indexOf(c);
+                return true;
+            }
+        }
+        return false;
     }
 
     private Boolean checkInList(Component component) {
@@ -57,9 +61,8 @@ public class MovieLibrary {
         return str.toString();
     }
 
-    public void printLibrary() {
+    public void printLibraryInfo() {
         int price = 0;
-
         for (Component component : components)
             price += component.getPrice();
 

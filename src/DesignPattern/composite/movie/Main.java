@@ -50,6 +50,12 @@ public class Main {
         library.delete(movie1);
 
         System.out.println("***** 라이브러리 내용 출력해보기 *****");
-        library.printLibrary();
+        library.printLibraryInfo();
+
+        System.out.println("***** replace 기능 테스트 *****");
+        Movie movie4 = new Movie("Movie4", 2023, 12330, "4K");
+        library.insert(movie2);
+        library.insert(movie4);
+        library.printLibraryInfo();
     }
 }
